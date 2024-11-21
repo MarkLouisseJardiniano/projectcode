@@ -1,32 +1,28 @@
 backend:
-  functions:
-    - entry: app.mjs
-      handler: handler
-      name: projectcode
-      path: ./
-      type: httpServer
-  language:
-    name: js
-    packageManager: npm
-  path: ./
-  scripts:
-    deploy: npm install
-    local: npm install
+    functions:
+        - entry: app.mjs
+          handler: handler
+          name: projectcode
+          path: ./
+          type: httpServer
+    language:
+        name: js
+        packageManager: npm
+    path: ./
+    scripts:
+        deploy: npm install
+        local: npm install
 frontend:
-  environment:
-    VITE_API_URL: ${{ backend.functions.express-mongo-starter.url }}
-  path: ./frontend
-  publish: ./dist
-  scripts:
-    build: npm run build
-    deploy: npm install
-    start: npm run dev
-  subdomain: darkgray-those-dog
+    environment:
+        VITE_API_URL_PROJECTCODE: ${{ backend.functions.projectcode.url }}
+    path: ./frontend
+    publish: dist
+    scripts:
+        build:
+            - npm run build
+        deploy:
+            - npm install
+    subdomain: projectcode
 name: projectcode
 region: us-east-1
-services:
-  databases:
-    - name: my-mongo-db
-      region: us-east-1
-      type: mongo-atlas
 yamlVersion: 2
