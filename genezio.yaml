@@ -2,7 +2,7 @@ backend:
     functions:
         - entry: app.mjs
           handler: handler
-          name: express-mongo-starter
+          name: projectcode
           path: ./
           type: httpServer
     language:
@@ -12,7 +12,17 @@ backend:
     scripts:
         deploy: npm install
         local: npm install
-name: express-mongo-starter
+frontend:
+    environment:
+        VITE_API_URL: ${{ backend.functions.express-mongo-starter.url }}
+    path: ./frontend
+    publish: ./dist
+    scripts:
+        build: npm run build
+        deploy: npm install
+        start: npm run dev
+    subdomain: darkgray-those-dog
+name: projectcode
 region: us-east-1
 services:
     databases:
