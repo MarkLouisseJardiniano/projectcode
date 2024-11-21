@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8080;
 
-// Middleware
+// Middlewar
 app.use(bodyParser.json());
 
 // Connect to MongoDB
