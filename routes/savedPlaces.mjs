@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const SavedPlace = require("../schema/savedPlaces.js");
-const User = require("../schema/auth.js");
+const SavedPlace = require("../schema/savedPlaces.mjs");
+const User = require("../schema/auth.mjs");
 
 router.get("/saved-place", async (req, res) => {
   try {

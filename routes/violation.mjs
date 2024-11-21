@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Violations = require("../schema/violationSchema.js");
+const Violations = require("../schema/violationSchema.mjs");
 const Driver = require("../schema/drivers.js");
 const User = require("../schema/auth.js");
 const Booking = require("../schema/ride.js");

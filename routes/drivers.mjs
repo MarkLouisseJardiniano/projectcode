@@ -2,7 +2,7 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const Driver = require("../schema/drivers.js");
+const Driver = require("../schema/drivers.mjs");
 
 const router = express.Router();
 const JWT_SECRET = "IWEFHsdfIHCW362weg47HGV3GB4678{]JKAsadFIH";

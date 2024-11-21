@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Document = require('../schema/documentRequirements.js');  // Assuming you have the Document schema defined in 'documentRequirements.js'
+const Document = require('../schema/documentRequirements.mjs');  // Assuming you have the Document schema defined in 'documentRequirements.js'
 
 // GET - Retrieve all documents
 router.get("/documents", async (req, res) => {

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Contact = require("../schema/contacts.js");
+const Contact = require("../schema/contacts.mjs");
 
 const sampleContacts = [
   { _id: "1", name: "BFP", number: "1234567890" },

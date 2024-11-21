@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Fare = require("../schema/fare.js");
+const Fare = require("../schema/fare.mjs");
 
 router.get("/fares", async (req, res) => {
   try {

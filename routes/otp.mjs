@@ -1,11 +1,11 @@
 // routes/otp.js
 const express = require("express");
 const router = express.Router();
-const Otp = require("../schema/otp.js");
+const Otp = require("../schema/otp.mjs");
 const nodemailer = require("nodemailer");
 const crypto = require("crypto");
-const User = require("../schema/auth.js");
-const Driver = require("../schema/drivers.js");
+const User = require("../schema/auth.mjs");
+const Driver = require("../schema/drivers.mjs");
 
 // Configure nodemailer
 const transporter = nodemailer.createTransport({

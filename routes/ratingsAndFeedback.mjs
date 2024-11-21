@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const Ratings = require("../schema/ratingsAndFeedbackSchema.js");
-const Driver = require("../schema/drivers.js");
-const User = require("../schema/auth.js");
-const Booking = require("../schema/ride.js");
+const Ratings = require("../schema/ratingsAndFeedbackSchema.mjs");
+const Driver = require("../schema/drivers.mjs");
+const User = require("../schema/auth.mjs");
+const Booking = require("../schema/ride.mjs");
 
 router.get("/ratings", async (req, res) => {
   try {

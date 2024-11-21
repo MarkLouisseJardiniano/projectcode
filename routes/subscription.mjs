@@ -3,8 +3,8 @@ const axios = require("axios");
 require("dotenv").config(); // Load environment variables from .env file
 const sharp = require("sharp");
 const router = express.Router();
-const Subscription = require("../schema/subscriptionSchema.js");
-const Driver = require("../schema/drivers.js");
+const Subscription = require("../schema/subscriptionSchema.mjs");
+const Driver = require("../schema/drivers.mjs");
 const { Storage } = require("@google-cloud/storage");
 const storage = new Storage();
 const path = require("path");

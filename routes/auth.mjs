@@ -1,8 +1,8 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const User = require("../schema/auth.js");
-const authenticateUser = require("../middleware/verify.js");
+const User = require("../schema/auth.mjs");
+const authenticateUser = require("../middleware/verify.mjs");
 
 const router = express.Router();
 const JWT_SECRET = "IWEFHsdfIHCW362weg47HGV3GB4678{]JKAsadFIH";

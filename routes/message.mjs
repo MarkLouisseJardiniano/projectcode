@@ -1,6 +1,6 @@
-const User = require("../schema/auth.js");
-const Message = require("../schema/message.js");
-const Driver = require("../schema/drivers.js");
+const User = require("../schema/auth.mjs");
+const Message = require("../schema/message.mjs");
+const Driver = require("../schema/drivers.mjs");
 const express = require("express");
 const router = express.Router();
 
